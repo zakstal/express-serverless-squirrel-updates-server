@@ -19,6 +19,7 @@ export async function darwin(req, res) {
   const shouldUpdate = semver.lt(version, latestVersion);
 
   if (shouldUpdate) {
+    console.log('these are the assets', latestRelease);
     const asset = latestRelease.assets.find(a => a.name.match(config.patterns.darwin.zip));
     if (!asset) throw new NotFoundError(`No asset found that matches '${config.patterns.darwin.zip}'.`);
 

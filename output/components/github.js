@@ -133,11 +133,11 @@ function getLatestRelease() {
   if (channel == _config2.default.channels[0]) {
     // Request the latest release directly
     return new _promise2.default(function (resolve, reject) {
-      github.repos.getLatestRelease({
+      github.repos.getReleases({
         user: _config2.default.user,
         repo: _config2.default.repo
       }, function (err, release) {
-        if (err) reject(err);else resolve(release);
+        if (err) reject(err);else resolve(release[0]);
       });
     });
   }

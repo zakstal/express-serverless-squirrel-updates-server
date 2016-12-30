@@ -20,7 +20,7 @@ functions:
          method: get
          integration: lambda-proxy
       - http:
-         path: home/one
+         path: /
          method: get
          integration: lambda-proxy
       - http:

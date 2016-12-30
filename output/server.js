@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function (app) {
 
-  //const app = express();
   var ravenClient = null;
 
   if (_config2.default.sentry && _config2.default.sentry.dsn) {
@@ -20,7 +19,7 @@ exports.default = function (app) {
     app.use(_raven2.default.middleware.express.requestHandler(ravenClient));
   }
 
-  app.get('/home/one', (0, _utils.asyncHandler)(homeCtrl.main));
+  app.get('/', (0, _utils.asyncHandler)(homeCtrl.main));
   app.get('/update/darwin', (0, _utils.asyncHandler)(updateCtrl.darwin));
   app.get('/update/win32/portable', (0, _utils.asyncHandler)(updateCtrl.win32_portable));
   app.get('/update/win32/:file', (0, _utils.asyncHandler)(updateCtrl.win32_file));

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/express-serverless-boilerplate.iml" filepath="$PROJECT_DIR$/.idea/express-serverless-boilerplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/express-serverless-squirrel-updates-server.iml" filepath="$PROJECT_DIR$/.idea/express-serverless-squirrel-updates-server.iml" />
     </modules>
   </component>
 </project>

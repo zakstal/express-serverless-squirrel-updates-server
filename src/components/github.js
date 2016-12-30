@@ -97,12 +97,12 @@ export function getLatestRelease(channel = config.channels[0]) {
   if (channel == config.channels[0]) {
     // Request the latest release directly
     return new Promise(function(resolve, reject) {
-      github.repos.getLatestRelease({
+      github.repos.getReleases({
         user: config.user,
         repo: config.repo
       }, function(err, release) {
         if (err) reject(err);
-        else resolve(release);
+        else resolve(release[0]);
       });
     });
   }

@@ -58,36 +58,37 @@ var darwin = exports.darwin = function () {
             shouldUpdate = _semver2.default.lt(version, latestVersion);
 
             if (!shouldUpdate) {
-              _context.next = 24;
+              _context.next = 25;
               break;
             }
 
+            console.log('these are the assets', latestRelease);
             asset = latestRelease.assets.find(function (a) {
               return a.name.match(_config2.default.patterns.darwin.zip);
             });
 
             if (asset) {
-              _context.next = 17;
+              _context.next = 18;
               break;
             }
 
             throw new _NotFoundError2.default('No asset found that matches \'' + _config2.default.patterns.darwin.zip + '\'.');
 
-          case 17:
+          case 18:
             downloadUrl = asset.browser_download_url;
 
             if (!_config2.default.privateRepo) {
-              _context.next = 22;
+              _context.next = 23;
               break;
             }
 
-            _context.next = 21;
+            _context.next = 22;
             return (0, _github.getPublicDownloadUrl)(asset.url);
 
-          case 21:
+          case 22:
             downloadUrl = _context.sent;
 
-          case 22:
+          case 23:
 
             res.json({
               url: downloadUrl,
@@ -98,11 +99,11 @@ var darwin = exports.darwin = function () {
 
             return _context.abrupt('return');
 
-          case 24:
+          case 25:
 
             res.status(204).end();
 
-          case 25:
+          case 26:
           case 'end':
             return _context.stop();
         }
