@@ -1,4 +1,4 @@
-service: express-serverless-boilerplate
+service: pinger-update-server
 
 
 provider:

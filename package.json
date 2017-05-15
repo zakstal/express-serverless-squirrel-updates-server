@@ -1,5 +1,5 @@
 {
-  "name": "express-serverless-boilerplate",
+  "name": "pinger-update-server",
   "version": "1.0.0",
   "description": "A boilerplate for using expressjs with serverless framework",
   "main": "lambda.js",
