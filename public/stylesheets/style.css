@@ -1,8 +1,67 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Khula', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Karla', sans-serif;
+*/
+.releases-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
 
-a {
-  color: #00B7FF;
-}
+.releases-body {
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  width: 100%; }
+
+.releases-mac {
+  background: #08A5E8; }
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.main-body {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.main-header {
+  padding: 80px 0 30px;
+  width: 100%;
+  border-bottom: 5px solid #047273;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
+.main-heading {
+  font-family: 'Quicksand', sans-serif;
+  color: #555; }
+
+.main-logo-img {
+  width: 200px;
+  margin-bottom: 20px; }
+
+
+
+.heading-1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  font-size: 32px; }
+
+.sub-heading-1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  font-size: 25px; }

@@ -1,3 +1,6 @@
+require('babel-register')({
+    presets: ['react']
+});
 require('dotenv').config({silent: true})
 var express = require('express');
 var path = require('path');

@@ -1,14 +1,16 @@
 var express = require('express');
-//import express from 'express';
 var router = express.Router();
-basePath = process.env.NODE_ENV === 'production' ? process.env.basePath : '';
+var basePath = process.env.NODE_ENV === 'production' ? process.env.basePath : '';
+var React = require('react');
+var ReactDOMServer = require('react-dom/server');
+var Index = require('../reactTemplates/index');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', {
-        title: 'Express',
-        basePath: basePath
-    });
+    var html = ReactDOMServer.renderToString(
+        <Index/>
+    )
+    res.send(html);
 });
 
 module.exports = router;
