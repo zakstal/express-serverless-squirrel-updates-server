@@ -49,8 +49,14 @@ var Index = function (_Component) {
                         'Pinger'
                     ),
                     _react2.default.createElement('link', { rel: 'stylesheet', href: '/stylesheets/style.css' }),
-                    _react2.default.createElement('link', { rel: 'shortcut icon', href: '../favicon.ico', type: 'image/x-icon' }),
-                    _react2.default.createElement('link', { rel: 'icon', href: '../favicon.ico', type: 'image/x-icon' }),
+                    _react2.default.createElement('link', { rel: 'shortcut icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }),
+                    _react2.default.createElement('link', { rel: 'icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }),
+                    _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' }),
+                    _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicons/favicon-32x32.png' }),
+                    _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicons/favicon-16x16.png' }),
+                    _react2.default.createElement('link', { rel: 'manifest', href: '/favicons/manifest.json' }),
+                    _react2.default.createElement('link', { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#5bbad5' }),
+                    _react2.default.createElement('meta', { name: 'theme-color', content: '#ffffff' }),
                     _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Karla|Khula|Open+Sans|Quicksand|Raleway|Titillium+Web', rel: 'stylesheet' })
                 ),
                 _react2.default.createElement(
@@ -83,12 +89,7 @@ var Index = function (_Component) {
                                 _react2.default.createElement(
                                     'h1',
                                     { className: 'main-heading' },
-                                    'What did I do yesterday?'
-                                ),
-                                _react2.default.createElement(
-                                    'h1',
-                                    { className: 'main-heading no-margin' },
-                                    'I\'ll look in pinger.'
+                                    'What did I do yesterday? I\'ll look in pinger.'
                                 )
                             ),
                             this.props.children

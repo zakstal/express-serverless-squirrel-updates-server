@@ -39,6 +39,10 @@ functions:
          path: assests/{proxy+}
          method: get
          integration: lambda-proxy
+      - http:
+         path: favicon/{proxy+}
+         method: get
+         integration: lambda-proxy
 custom:
   serverless-offline:
     babelOptions:
