@@ -37,6 +37,8 @@ var Index = function (_Component) {
     (0, _createClass3.default)(Index, [{
         key: 'render',
         value: function render() {
+            var metaDesc = 'What did you do yesterday? Look in pinger. Pinger pops up from your tray on a semi random interval so you can track how you spend you time.';
+            var metaTitle = "Pinger";
             return _react2.default.createElement(
                 'html',
                 null,
@@ -48,14 +50,28 @@ var Index = function (_Component) {
                         null,
                         'Pinger'
                     ),
+                    _react2.default.createElement('meta', { charset: 'utf-8' }),
+                    _react2.default.createElement('meta', { name: 'description', content: metaDesc }),
+                    _react2.default.createElement('meta', { property: 'og:title', content: metaTitle }),
+                    _react2.default.createElement('meta', { property: 'og:description', content: metaDesc }),
+                    _react2.default.createElement('meta', { property: 'og:site_name', content: metaTitle }),
+                    _react2.default.createElement('meta', { property: 'og:type', content: 'website' }),
+                    _react2.default.createElement('meta', { property: 'og:image', content: '//s3.amazonaws.com/pingerpinger/pingerLogo6.png' }),
+                    _react2.default.createElement('meta', { property: 'og:image:type', content: 'image/svg+xml' }),
+                    _react2.default.createElement('meta', { property: 'og:image:width', content: '300' }),
+                    _react2.default.createElement('meta', { property: 'og:image:height', content: '300' }),
+                    _react2.default.createElement('meta', { property: 'twitter:title', content: metaTitle }),
+                    _react2.default.createElement('meta', { property: 'twitter:description', content: metaDesc }),
+                    _react2.default.createElement('meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge,chrome=1' }),
+                    _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, minimal-ui' }),
                     _react2.default.createElement('link', { rel: 'stylesheet', href: '/stylesheets/style.css' }),
-                    _react2.default.createElement('link', { rel: 'shortcut icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }),
-                    _react2.default.createElement('link', { rel: 'icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }),
-                    _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png' }),
-                    _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicons/favicon-32x32.png' }),
-                    _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicons/favicon-16x16.png' }),
-                    _react2.default.createElement('link', { rel: 'manifest', href: '/favicons/manifest.json' }),
-                    _react2.default.createElement('link', { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#5bbad5' }),
+                    _react2.default.createElement('link', { rel: 'shortcut icon', href: '//s3.amazonaws.com/pingerpinger/favicon.ico', type: 'image/x-icon' }),
+                    _react2.default.createElement('link', { rel: 'icon', href: '//s3.amazonaws.com/pingerpinger/favicon.ico', type: 'image/x-icon' }),
+                    _react2.default.createElement('link', { rel: 'apple-touch-icon', sizes: '180x180', href: '//s3.amazonaws.com/pingerpinger/apple-touch-icon.png' }),
+                    _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '//s3.amazonaws.com/pingerpinger/favicon-32x32.png' }),
+                    _react2.default.createElement('link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '//s3.amazonaws.com/pingerpinger/favicon-16x16.png' }),
+                    _react2.default.createElement('link', { rel: 'manifest', href: '//s3.amazonaws.com/pingerpinger/manifest.json' }),
+                    _react2.default.createElement('link', { rel: 'mask-icon', href: '//s3.amazonaws.com/pingerpinger/safari-pinned-tab.svg', color: '#5bbad5' }),
                     _react2.default.createElement('meta', { name: 'theme-color', content: '#ffffff' }),
                     _react2.default.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Karla|Khula|Open+Sans|Quicksand|Raleway|Titillium+Web', rel: 'stylesheet' })
                 ),

@@ -62,7 +62,8 @@
   font-family: 'Quicksand', sans-serif;
   color: #555;
   margin-bottom: 0;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  text-align: center; }
   .main-heading.no-margin {
     margin: 0; }
 

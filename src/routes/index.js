@@ -5,6 +5,7 @@ var React = require('react');
 var ReactDOMServer = require('react-dom/server');
 var Index = require('../reactTemplates/index');
 var Releases = require('../reactTemplates/Releases');
+import BadRequestError from '../errors/BadRequestError';
 import {getAllReleases, getLatestRelease, getPublicDownloadUrl} from '../components/github';
 
 /* GET home page. */
@@ -18,7 +19,7 @@ router.get('/', function(req, res, next) {
         )
         res.send(html);
     })
-    .catch(err => console.error('error', err));
+    .catch(err => console.error('error in index.js', err))
 });
 
 module.exports = router;

@@ -1,6 +1,12 @@
 'use strict';
 
+var _BadRequestError = require('../errors/BadRequestError');
+
+var _BadRequestError2 = _interopRequireDefault(_BadRequestError);
+
 var _github = require('../components/github');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var express = require('express');
 var router = express.Router();
@@ -22,7 +28,7 @@ router.get('/', function (req, res, next) {
         ));
         res.send(html);
     }).catch(function (err) {
-        return console.error('error', err);
+        return console.error('error in index.js', err);
     });
 });
 
