@@ -1,27 +1,18 @@
 // var React = require('react');
 import React, { Component } from 'react';
-import {getAllReleases, getLatestRelease, getPublicDownloadUrl} from '../src/components/github';
 
 class Releases extends Component {
 
-    coponentWillMount() {
-        this.state = {
-            releases: []
-        }
-    }
-
-    getReleases() {
-        getAllReleases().then(releases => {
-            this.setState({releases})
-        })
-    }
-
-    renderReleases() {
-        this.state.releases.map(release => {
-            const { tag_name, assets_url, name, body } = release;
+    renderReleases(releases) {
+        return releases.map(release => {
+            const { tag_name,  html_url, name, body } = release;
             return (
-                <a key={tag_name} href={assets_url}>
-                    <p>{tag_name}</p>
+                <a 
+                    className="releases-item"
+                    key={tag_name} 
+                    href={ html_url}
+                >
+                    <p className="release-version">{tag_name}</p>
                     <p>{name}</p>
                     <p>{body}</p>
                 </a>
@@ -30,14 +21,15 @@ class Releases extends Component {
     }
 
     render() {
-        this.getReleases();
+        const { releases } = this.props;
+        const releaseEls = releases ? this.renderReleases(releases) : null;
         return (
             <section className="releases-container">
                 <h2 className="heading-1">Releases</h2>
                 <div className="releases-body">
                     <h3 className="sub-heading-1">Mac</h3>
                     <div className="releases-mac">
-                        {this.state && this.state.releases ? this.renderReleases() : null}
+                        { releaseEls }
                     </div>
                 </div>
             </section>

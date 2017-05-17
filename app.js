@@ -1,6 +1,6 @@
-require('babel-register')({
-    presets: ['react']
-});
+// require('babel-register')({
+//     presets: ['react']
+// });
 require('dotenv').config({silent: true})
 var express = require('express');
 var path = require('path');
@@ -11,8 +11,8 @@ var bodyParser = require('body-parser');
 var compression = require('compression')
 
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+// var index = require('./routes/index');
+// var users = require('./routes/users');
 
 var app = express();
 app = require('./output/server').default(app)
@@ -30,8 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression())
 
 
-app.use('/', index);
-app.use('/users', users);
+// app.use('/', index);
+// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

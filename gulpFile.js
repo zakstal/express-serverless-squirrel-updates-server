@@ -4,13 +4,13 @@ var rename = require("gulp-rename");
 var concat = require("gulp-concat");
 
 gulp.task('sass', function(){
-  return gulp.src('reactTemplates/**/*.scss')
+  return gulp.src('src/reactTemplates/**/*.scss')
     .pipe(sass()) // Using gulp-sass
-    // .pipe(rename({
-    //         basename: 'style',
-    //         extname: '.css'
-    //     })
-    // )
+    .pipe(rename({
+            basename: 'style',
+            extname: '.css'
+        })
+    )
     .pipe(concat('style.css'))
     .pipe(gulp.dest('public/stylesheets/'))
 });

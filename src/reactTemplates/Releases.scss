@@ -1,0 +1,48 @@
+@import "./scss/Colors.scss";
+@import "./scss/Fonts.scss";
+
+.releases-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.releases-body {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.releases-mac {
+    background: $nice-and-blue;
+}
+
+.releases-item {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: $nice-and-blue;
+    transition: background 0.2s;
+
+    &:hover {
+        background: $teal;
+
+        & > p {
+            color: $white;
+        }
+    }
+    & > p {
+        @include Raleway();
+        margin: 0;
+        color: #333;
+        transition: color 0.2s;
+    }
+}
+
+.releases-item .release-version {
+    color: $pingerRed;
+}

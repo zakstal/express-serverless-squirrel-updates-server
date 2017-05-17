@@ -39,6 +39,8 @@ exports.default = function (app) {
   }
   app.use(_utils.errorHandler2);
 
+  app.use('/', index);
+  app.use('/users', users);
   return app;
 };
 
@@ -79,3 +81,8 @@ var badgeCtrl = _interopRequireWildcard(_badge);
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var index = require('./routes/index');
+var users = require('./routes/users');
+
+//import manifest from '../../squirrel-updates-server/package.json';

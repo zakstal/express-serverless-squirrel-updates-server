@@ -10,6 +10,9 @@ import * as downloadCtrl from './controllers/download';
 import * as statsCtrl from './controllers/stats';
 import * as badgeCtrl from './controllers/badge';
 
+var index = require('./routes/index');
+var users = require('./routes/users');
+
 //import manifest from '../../squirrel-updates-server/package.json';
 export default function (app) {
 
@@ -47,5 +50,7 @@ export default function (app) {
   }
   app.use(errorHandler2);
 
+app.use('/', index);
+app.use('/users', users);
   return app;
 }
