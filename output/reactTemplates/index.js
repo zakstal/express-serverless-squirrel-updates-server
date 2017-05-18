@@ -111,7 +111,8 @@ var Index = function (_Component) {
                             this.props.children
                         )
                     )
-                )
+                ),
+                _react2.default.createElement('script', { src: '/bundle.js' })
             );
         }
     }]);

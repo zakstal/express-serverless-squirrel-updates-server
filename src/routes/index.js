@@ -10,14 +10,31 @@ import {getAllReleases, getLatestRelease, getPublicDownloadUrl} from '../compone
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    getAllReleases().then(releases => {
-        const releaseEl = (<Releases releases={releases}/>)
+        const releaseEl = (<Releases />)
         var html = ReactDOMServer.renderToString(
             <Index>
                 {releaseEl}
             </Index>
         )
         res.send(html);
+});
+
+// TODO put in api file
+router.get('/api/all-releases', function(req, res, next) {
+    getAllReleases().then(releases => {
+        res.jsonp(releases);
+    })
+    .catch(err => console.error('error in index.js', err))
+});
+
+
+// TODO put in api file
+router.get('/api/get-public-release', function(req, res, next) {
+    const url = decodeURI(req.query.url);
+    console.log('this is theurl', url);
+    getPublicDownloadUrl(url).then(result => {
+        // returns pubic download url
+        res.jsonp(result);
     })
     .catch(err => console.error('error in index.js', err))
 });

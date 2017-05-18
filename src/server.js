@@ -30,7 +30,7 @@ export default function (app) {
     app.use(raven.middleware.express.requestHandler(ravenClient));
   }
 
-  // app.get('/', asyncHandler(homeCtrl.main));
+  app.get('/can-update', asyncHandler(homeCtrl.main));
   app.get('/update/darwin', asyncHandler(updateCtrl.darwin));
   app.get('/update/win32/portable', asyncHandler(updateCtrl.win32_portable));
   app.get('/update/win32/:file', asyncHandler(updateCtrl.win32_file));

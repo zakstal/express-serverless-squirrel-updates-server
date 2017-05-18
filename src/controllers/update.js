@@ -24,6 +24,7 @@ export async function darwin(req, res) {
     if (!asset) throw new NotFoundError(`No asset found that matches '${config.patterns.darwin.zip}'.`);
 
     let downloadUrl = asset.browser_download_url;
+    console.log('asset', asset)
     if (config.privateRepo) {
       downloadUrl = await getPublicDownloadUrl(asset.url);
     }

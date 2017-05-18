@@ -56,6 +56,7 @@ class Index extends Component {
                         </div>
                     </div>
                 </body>
+                <script src='/bundle.js' />
             </html>
         )
     }

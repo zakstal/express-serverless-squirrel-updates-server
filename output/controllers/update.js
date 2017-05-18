@@ -58,7 +58,7 @@ var darwin = exports.darwin = function () {
             shouldUpdate = _semver2.default.lt(version, latestVersion);
 
             if (!shouldUpdate) {
-              _context.next = 25;
+              _context.next = 26;
               break;
             }
 
@@ -77,18 +77,20 @@ var darwin = exports.darwin = function () {
           case 18:
             downloadUrl = asset.browser_download_url;
 
+            console.log('asset', asset);
+
             if (!_config2.default.privateRepo) {
-              _context.next = 23;
+              _context.next = 24;
               break;
             }
 
-            _context.next = 22;
+            _context.next = 23;
             return (0, _github.getPublicDownloadUrl)(asset.url);
 
-          case 22:
+          case 23:
             downloadUrl = _context.sent;
 
-          case 23:
+          case 24:
 
             res.json({
               url: downloadUrl,
@@ -99,11 +101,11 @@ var darwin = exports.darwin = function () {
 
             return _context.abrupt('return');
 
-          case 25:
+          case 26:
 
             res.status(204).end();
 
-          case 26:
+          case 27:
           case 'end':
             return _context.stop();
         }
